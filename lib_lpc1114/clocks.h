@@ -28,5 +28,6 @@ void clocks_config(){
 	clock_iocon();
 	clock_i2c();
 	clock_uart();
+	clock_adc();
 }
 
