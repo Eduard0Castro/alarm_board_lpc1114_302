@@ -25,7 +25,7 @@ int main(){
             toggleLED(2);
             for(int i = 0; i < 0x3FFF; i++);
         }
-        else if (adc_value < 767) {
+        else if (adc_value < 768) {
             toggleLED(3);
             for(int i = 0; i < 0x3FFF; i++);
         }
