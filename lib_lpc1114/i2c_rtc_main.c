@@ -46,10 +46,10 @@ int main(void)
         LCD_set_cursor(0, 0);
 
         LCD_escreve(convertBCD_ASCII(horas));
-		LCD_escreve(":");
-		LCD_escreve(convertBCD_ASCII(minutos));
-		LCD_escreve(":");
-		LCD_escreve(convertBCD_ASCII(segundos));
+        LCD_escreve(":");
+        LCD_escreve(convertBCD_ASCII(minutos));
+        LCD_escreve(":");
+        LCD_escreve(convertBCD_ASCII(segundos));
 
         LCD_set_cursor(1, 0);
         LCD_escreve(convertBCD_ASCII(dia));

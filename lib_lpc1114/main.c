@@ -9,6 +9,7 @@
 #include "stateMachine.h"
 #include "output.h"
 #include "i2c_rtc.h"
+#include "adc.h"
 
 
 int main(void)
@@ -24,15 +25,13 @@ int main(void)
     eventInit();
     varInit();
     I2C_Config();
-    //timerInit();
+    ADC_Config();
+    ADC_pin_config(0);
 
 
     for (;;) {
-        //timerReset(getTime());
-
         //state machine:
         smLoop();
-        //timerWait();
     }
     return 0;
 }

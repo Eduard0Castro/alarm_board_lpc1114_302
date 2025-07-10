@@ -58,12 +58,13 @@ void LCD_envia_byte(uint8_t dado, int comando) {
     envia_nibble(dado & 0x0F); // parte baixa
     pulso_enable();
 
-    delay_ms(2);
+  
 }
 
 // === ENVIA UM COMANDO DIRETAMENTE ===
 void LCD_cmd(uint8_t cmd) {
     LCD_envia_byte(cmd, 1);
+      delay_ms(2);
 }
 
 // === ENVIA UM CARACTERE DIRETAMENTE ===
@@ -105,7 +106,7 @@ void LCD_iniciar()
 
 void pulso_enable() {
     bit_set(&LCD_E_PORT->DATA, LCD_E_PIN);
-    delay_ms(1);
+    //delay_ms(1);
     bit_clr(&LCD_E_PORT->DATA, LCD_E_PIN);
 }
 
