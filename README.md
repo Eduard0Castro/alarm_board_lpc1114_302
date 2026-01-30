@@ -152,7 +152,10 @@ In practical terms, you will find at `docs/kicad/`:
 
 - The PCB layout (.kicad_pcb), which contains component placement, routing, copper zones, and mechanical constraints used for fabrication.
 
- ![ PCB Layers view](img/pcb_layers_view.png) 
+| Layers view | PCB 3D Layout |
+|---|---|
+| ![Schematic](img/pcb_layers_view.png) | ![PCB](img/pcb_3d.png) |
+
 
 
 ---
