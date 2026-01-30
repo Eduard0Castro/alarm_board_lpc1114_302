@@ -5,18 +5,20 @@
 
 int main(){
     clocks_config();
-    ADC_Config();
-    ADC_pin_config(0);
-    LCD_pin_config();
-    LCD_iniciar();
+    ADCconfig();
+    ADCpinConfig(0);
+    LCDpinConfig();
+    LCDinit();
+
     configureLED();
-    apagaLEDS();
+    turnOffLEDs();
 
     int adc_value;
     while(1){
-        LCD_cmd(0x80);
+        LCDcmd(0x80);
         adc_value = ADC_read();
-        LCD_Int(adc_value);
+        LCDint(adc_value);
+
         if (adc_value < 256) {
             toggleLED(1);
             for(int i = 0; i < 0x3FFF; i++);
@@ -33,7 +35,8 @@ int main(){
             toggleLED(4);
             for(int i = 0; i < 0x3FFF; i++);
         }
-        apagaLEDS();
+
+        turnOffLEDs();
     }
     return 0;
 }

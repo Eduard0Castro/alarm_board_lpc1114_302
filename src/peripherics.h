@@ -13,5 +13,16 @@
 #define buttonL (1 << LEFT)
 #define buttonR (1 << RIGHT)
 
+enum {
+
+	BS,
+	BU,
+	BD,
+	BL,
+	BR,
+	NONE
+};
+
 void configureButtons();
-char readButtons();
+unsigned char readButtons();
+unsigned char readButtons2();
